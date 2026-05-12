@@ -1,77 +1,88 @@
 * {
-.portfolio-card:hover,
-.service-box:hover {
-    transform: translateY(-10px);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.project-card img,
-.portfolio-card img,
-.about-image {
-    width: 100%;
-    display: block;
-    border-radius: 10px;
-}
-
-.project-info,
-.portfolio-card h3,
-.portfolio-card p {
-    padding-top: 15px;
-}
-
-.page-header {
-    padding-top: 160px;
-    padding-bottom: 60px;
-    text-align: center;
-    background: linear-gradient(135deg, #091428, #0d1f36);
-}
-
-.page-header h1 {
-    font-size: 3rem;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    align-items: center;
-}
-
-.contact-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: none;
-    background: rgba(255,255,255,0.08);
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #080b14;
     color: white;
+    line-height: 1.6;
 }
 
-footer {
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00d4ff;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00d4ff;
+}
+
+.hero {
+    height: 100vh;
+    background: url('../assets/hero-bg.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 30px 0;
-    border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-@media(max-width: 768px) {
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
 
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
 
-    .hero h1 {
-        font-size: 2.5rem;
-    }
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
 
-    .hero p {
-        font-size: 1rem;
-    }
-
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
